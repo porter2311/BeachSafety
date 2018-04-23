@@ -61,7 +61,7 @@ Having a screen, like a cell phone, may allow for more features, but screens are
 
 ### Sketches
 
-Untested, but should work according to the docs.
+Untested, but should work according to the docs. Need to add batteries to the sketches.
 
 ![Transmitter](https://github.com/ericrohlfs/beachsafety/raw/master/BeachSafety2018_GPS_Transmitter.png)
 
