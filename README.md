@@ -25,6 +25,8 @@ https://learn.adafruit.com/adafruit-fona-808-cellular-plus-gps-breakout/arduino-
 
 https://github.com/adafruit/Adafruit_FONA
 
+https://cdn-learn.adafruit.com/downloads/pdf/adafruit-fona-808-cellular-plus-gps-shield-for-arduino.pdf
+
 
 ## Technical Challenge
 
