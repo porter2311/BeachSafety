@@ -3,11 +3,27 @@ Virginia Beach Makerbot competition  2018
 
 ## Resources
 
+### Wireless
+
 https://randomnerdtutorials.com/rf-433mhz-transmitter-receiver-module-with-arduino/
 
 https://dronebotworkshop.com/433mhz-rf-modules-arduino/
 
 https://arduinobasics.blogspot.com/2014/06/433-mhz-rf-module-with-arduino-tutorial.html
+
+### GPS
+
+Calculating Distance http://forum.arduino.cc/index.php?topic=27541.0
+
+GPS to Ardiuino
+
+https://github.com/adafruit/Adafruit_FONA/blob/master/examples/GPS/GPS.ino
+
+https://learn.adafruit.com/adafruit-fona-808-cellular-plus-gps-breakout/wiring-to-arduino
+
+https://learn.adafruit.com/adafruit-fona-808-cellular-plus-gps-breakout/arduino-test
+
+https://github.com/adafruit/Adafruit_FONA
 
 
 ## Technical Challenge
