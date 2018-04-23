@@ -36,6 +36,6 @@ We might need an accelerometer/gyroscope/compass to help with our direction visu
 We need a simple durable cost effective display. 
 
 
-![Ghostbusters](https://github.com/ericrohlfs/beachsafety/raw/master/images/Ghostbusters2.jpg)
+![Ghostbusters](https://github.com/ericrohlfs/beachsafety/raw/master/Ghostbusters2.jpg)
 
 
