@@ -35,7 +35,10 @@ We might need an accelerometer/gyroscope/compass to help with our direction visu
 
 We need a simple durable cost effective display. 
 
+LED's are durable, inexpensive, and easy to wire up.  
+Having a screen, like a cell phone, may allow for more features, but screens are more difficult to program, they cost more, and are not as durable. 
 
 ![Ghostbusters](https://github.com/ericrohlfs/beachsafety/raw/master/Ghostbusters2.jpg)
+
 
 
