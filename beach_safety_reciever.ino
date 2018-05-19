@@ -34,19 +34,19 @@
 //======================================================================
 
 
-!!!!IMPORTANT!!!!
+//!!!!IMPORTANT!!!!
 // Open the RH_ASK.cpp file from the RadioHead library and uncomment #define RH_ASK_ARDUINO_USE_TIMER2
 // If you don't you will see errors about are shared interrput when compiling.
 
 #include <GPSport.h>
 
-#include RH_ASK.h> 
-#include SPI.h> // Not actually used but needed to compile 
+#include <RH_ASK.h> 
+#include <SPI.h> // Not actually used but needed to compile 
 
 //http://electronics-diy.com/complete-guide-for-rf-433mhz-transmitter-receiver-module-with-arduino.php
 int SensorData; 
 char SensorCharMsg[4]; 
-RH_ASK driver(2000,4,12,8,false);;
+RH_ASK driver(2000,5,12,8,false);
 
 //------------------------------------------------------------
 // Check that the config files are set up properly
@@ -82,14 +82,17 @@ void setup()
 void loop()
 {
   while (gps.available( gpsPort )) {
+    //read lat,lon from other device
     uint8_t buf[12]; 
     uint8_t buflen = sizeof(buf); 
     if (driver.recv(buf, &buflen)) // Non-blocking 
     { 
-    int i; 
-    // Message with a good checksum received, dump it. 
-    Serial.print("Message: "); 
-    Serial.println((char*)buf); 
+      int i; 
+      // Message with a good checksum received, dump it. 
+      Serial.print("Message: "); 
+      Serial.println((char*)buf);
+      //todo: parse the lat,lon 
+      //todo: then set these values to the base
     } 
 
     //todo: parse the distance recieved and set it as the base.
@@ -102,8 +105,19 @@ void loop()
       DEBUG_PORT.print( F("Range: ") );
       DEBUG_PORT.print( range );
       DEBUG_PORT.println( F(" Miles") );
+      //todo: convert the distance to a visual for lights
+      //todo: need to set a max value for showing all five lights
+      //todo: then divide by five to figure out the range to show which lights
+      //given a max rf range of 100 meters, at 100 meters all five lights will be on
+      //given 20 meters only one light will be on for distance
+
+      //if the following is possible.
+      //todo: determine bearing and figure out which lights to show, given n,s,e,w and ne,nw,se,sw, if the other person is north, and the 
+      //current person is heading south, then make the bottom lighth light up so they know to turn around.
+      //if the handheld is pointing north, and the sending unit is pointing north, then the top light will be showing.
     } else
       // Waiting...
       DEBUG_PORT.print( '.' );
   }
+  
 } // loop
