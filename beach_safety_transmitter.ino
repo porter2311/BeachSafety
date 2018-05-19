@@ -88,6 +88,8 @@ void loop()
       char msg[20];
       buf.toCharArray(msg,20);
       driver.send((uint8_t *)msg, 20);
+      driver.waitPacketSent(); 
+      delay(1000); 
     }
 
     DEBUG_PORT.println();
