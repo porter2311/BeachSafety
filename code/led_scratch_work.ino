@@ -40,9 +40,10 @@ void set_led(int direction)
     case 4: m.setDot(6, 2, true); m.setDot(5,3,true);  break;
     //turn around behind you
     case 5: m.setDot(7, 4, true); m.setDot(7,5,true); break;
-    case 6: m.setDot(5, 5, true); m.setDot(5,6,true);
+    case 6: m.setDot(3, 6, true); m.setDot(4,6,true); break;
     default:
-      break;
+    break;
   }
 
 }
+
